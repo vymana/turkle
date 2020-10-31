@@ -11,13 +11,12 @@ from bs4 import BeautifulSoup
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.db.models import Count, IntegerField, OuterRef, Prefetch, Subquery
+from django.db.models import Count, IntegerField, OuterRef, Prefetch, Subquery, JSONField
 from django.db.models.functions import Coalesce
 from django.utils import timezone
 from guardian.core import ObjectPermissionChecker
 from guardian.models import GroupObjectPermission
 from guardian.shortcuts import assign_perm, get_group_perms, get_groups_with_perms
-from jsonfield import JSONField
 
 from .utils import get_turkle_template_limit
 
