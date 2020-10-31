@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load static %}
 
 {% block body %}
 
@@ -67,7 +67,9 @@
   <h1>No Tasks available at this time</h1>
   {% if not user.is_authenticated  %}
   <h4>
+    {% comment %}
     You may need to <a href="{% url 'login' %}">Login</a> to see available Tasks
+    {% endcomment %}
   </h4>
   {% endif %}
   {% endif %}
